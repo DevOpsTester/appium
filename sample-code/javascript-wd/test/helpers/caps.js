@@ -3,15 +3,15 @@ import path from 'path';
 const iosCaps = {
   platformName: 'iOS',
   automationName: 'XCUITest',
-  deviceName: 'iPhone 6 Simulator' || process.env.IOS_DEVICE_NAME,
-  platformVersion: '11.1' || process.env.IOS_PLATFORM_VERSION,
+  deviceName: process.env.IOS_DEVICE_NAME || 'iPhone SE',
+  platformVersion: process.env.IOS_PLATFORM_VERSION || '11.1',
   app: undefined, // Will be added in tests
 };
 
 const androidCaps = {
   platformName: 'Android',
   automationName: 'UiAutomator2',
-  deviceName: 'Android' || process.env.ANDROID_DEVICE_NAME,
+  deviceName: process.env.ANDROID_DEVICE_NAME || 'Android',
   app: undefined, // Will be added in tests
 };
 
