@@ -1,8 +1,8 @@
-if (process.env.DEV) {
+if (process.env.DEV && !process.env.SAUCE_LABS) {
   exports.iosTestApp = "sample-code/apps/TestApp.app.zip";
   exports.androidApiDemos = "sample-code/apps/ApiDemos-debug.apk";
 } else {
-  // TODO: Change thes URL's to updated locations
-  exports.iosTestApp = "http://appium.github.io/appium/assets/TestApp7.1.app.zip";
-  exports.androidApiDemos = "http://appium.github.io/appium/assets/ApiDemos-debug.apk";
+  // TODO: Change thes URL's to 'master' locations
+  exports.iosTestApp = "https://github.com/appium/appium/raw/dpgraham-create-session/sample-code/apps/TestApp.app.zip";
+  exports.androidApiDemos = "https://github.com/appium/appium/raw/dpgraham-create-session/sample-code/apps/ApiDemos-debug.apk";
 }
